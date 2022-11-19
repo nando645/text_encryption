@@ -25,5 +25,5 @@ def dekripsi():
         return render_template('dekripsi.html', submit=True, plaintext=decrypted)
     return render_template('dekripsi.html', submit=False, variabel=1234)
 
-
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)

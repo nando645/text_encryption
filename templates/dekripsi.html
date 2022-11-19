@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Text Encryption App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+          body{
+            display:flex; flex-direction:column; justify-content:center;
+            min-height:100vh;
+            background-color: powderblue;
+            position: relative;
+            margin: auto;
+            left: 100px;
+          }    
+        </style>
+    </head>
+
+    <body>
+        <a href="/">Enkripsi</a>
+        <div>
+          <h2>AES Decryption</h2>
+          <form method="POST">
+              <div class="form-group">
+                <label for="">Masukkan ciphertext untuk didekripsi</label><br>
+                <textarea name="plaintext" id="" cols="30" rows="10" minlength="16" placeholder="Masukkan teks untuk didekripsi" required></textarea>
+              </div>
+              <div>
+                  <label for="">Masukkan key</label>
+                  <input name="key" id="" cols="30" rows="10" placeholder="key" required>
+                  <input type="submit" value="Dekripsi">
+              </div>
+            </form>
+            <div>
+            </div>
+            <div>
+              {% if submit %}
+                <h3>Hasil</h3>
+                <textarea name="output_cipher" id="" cols="30" rows="10" placeholder="Hasil Dekripsi" required>{{plaintext}}</textarea>
+              {% endif %}                
+            </div>
+          </form>
+      </div>
+    </body>
+</html>
